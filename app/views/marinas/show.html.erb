@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @marina.name %>
+</p>
+
+<p>
+  <strong>Information:</strong>
+  <%= @marina.information %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @marina.contact %>
+</p>
+
+<p>
+  <strong>Prices:</strong>
+  <%= @marina.prices %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @marina.rating %>
+</p>
+
+<%= link_to 'Edit', edit_marina_path(@marina) %> |
+<%= link_to 'Back', marinas_path %>

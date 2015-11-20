@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Marinas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Information</th>
+      <th>Contact</th>
+      <th>Prices</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marinas.each do |marina| %>
+      <tr>
+        <td><%= marina.name %></td>
+        <td><%= marina.information %></td>
+        <td><%= marina.contact %></td>
+        <td><%= marina.prices %></td>
+        <td><%= marina.rating %></td>
+        <td><%= link_to 'Show', marina %></td>
+        <td><%= link_to 'Edit', edit_marina_path(marina) %></td>
+        <td><%= link_to 'Destroy', marina, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Marina', new_marina_path %>
