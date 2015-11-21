@@ -17,6 +17,7 @@
   <tbody>
     <% @marinas.each do |marina| %>
       <tr>
+        <td><%= image_tag marina.image.url (:medium) %></td>
         <td><%= marina.name %></td>
         <td><%= marina.information %></td>
         <td><%= marina.contact %></td>

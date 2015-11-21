@@ -69,6 +69,6 @@ class MarinasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def marina_params
-      params.require(:marina).permit(:name, :information, :contact, :prices, :rating)
+      params.require(:marina).permit(:name, :information, :contact, :prices, :rating, :image)
     end
 end
