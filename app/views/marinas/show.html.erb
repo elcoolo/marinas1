@@ -1,28 +1,40 @@
-<%= image_tag @marina.image.url(:medium) %>
-<p>
-  <strong>Name:</strong>
-  <%= @marina.name %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+     <div class="col-md-4">
+       <%= image_tag @marina.image.url(:medium) %>
+       <div class="table-responsive">
+         <table class="table">
+           <tbody>
+             <tr>
+             <td><strong>Name:</strong></td>
+             <td><%= @marina.name %></td>
+            </tr>
+            <tr>
+              <td><strong>Information:</strong></td>
+              <td><%= @marina.information %></td>
+            </tr>
+            <tr>
+              <td><strong>Contact:</strong></td>
+              <td><%= @marina.contact %></td>
+            </tr>
+            <tr>
+              <td><strong>Prices:</strong></td>
+              <td><%= @marina.prices %></td>
+            </tr>
+            <tr>
+              <td><strong>Rating:</strong></td>
+              <td><%= @marina.rating %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
 
-<p>
-  <strong>Information:</strong>
-  <%= @marina.information %>
-</p>
 
-<p>
-  <strong>Contact:</strong>
-  <%= @marina.contact %>
-</p>
-
-<p>
-  <strong>Prices:</strong>
-  <%= @marina.prices %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @marina.rating %>
-</p>
 
 <%= link_to 'Edit', edit_marina_path(@marina) %> |
 <%= link_to 'Back', marinas_path %>
